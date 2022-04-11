@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeScreenFragment">
+
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="banksystems.bank.bankapp.banking.screens.HomeScreenFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home_screen">
+        <action
+            android:id="@+id/action_homeScreenFragment_to_usersListFragment"
+            app:destination="@id/usersListFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_transactionsFragment"
+            app:destination="@id/transactionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/usersDetailFragmnet"
+        android:name="banksystems.bank.bankapp.banking.screens.UsersDetailFragmnet"
+        android:label="customer Details"
+        tools:layout="@layout/fragment_users_detail_fragmnet">
+        <argument
+            android:name="user"
+            app:argType="banksystems.bank.bankapp.banking.models.User" />
+        <action
+            android:id="@+id/action_usersDetailFragmnet_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/usersListFragment"
+        android:name="banksystems.bank.bankapp.banking.screens.UsersListFragment"
+        android:label="customers List"
+        tools:layout="@layout/fragment_users_list">
+        <action
+            android:id="@+id/action_usersListFragment_to_usersDetailFragmnet"
+            app:destination="@id/usersDetailFragmnet" />
+
+    </fragment>
+    <dialog
+        android:id="@+id/transactionFragment"
+        android:name="banksystems.bank.bankapp.banking.screens.TransactionFragment"
+        tools:layout="@layout/fragment_transaction" />
+    <fragment
+        android:id="@+id/transactionsFragment"
+        android:name="banksystems.bank.bankapp.banking.screens.TransactionsFragment"
+        android:label="curent Transactions"
+        tools:layout="@layout/fragment_transactions" />
+</navigation>
