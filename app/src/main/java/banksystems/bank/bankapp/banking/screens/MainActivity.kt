@@ -27,17 +27,6 @@ class MainActivity : AppCompatActivity() {
         setTheme(R.style.Theme_Banking)
 
         setContentView(R.layout.activity_main)
-//
-//        val navHostFragment =
-//            supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
-//navController=navHostFragment.findNavController()
-//        setSupportActionBar(findViewById(R.id.toolbar))
-//        setupActionBarWithNavController(navController)
-//    }
 
-//    override fun onSupportNavigateUp(): Boolean {
-//return navController.navigateUp() || super.onSupportNavigateUp()
-//
-//    }
     }
 }

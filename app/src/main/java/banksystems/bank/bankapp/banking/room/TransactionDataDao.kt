@@ -11,6 +11,7 @@ import banksystems.bank.bankapp.banking.models.User
 interface TransactionDataDao {
     @Insert
     suspend  fun InsertTransction(transaction: Transaction )
+
     @Query("SELECT * from transaction_table")
       fun GetAllTransctionsData():LiveData<List<Transaction>>
 }
